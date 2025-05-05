@@ -1,0 +1,7 @@
+# default: self-detect the content type (text vs. binary)
+*                 text=auto
+
+
+# enforce content type "text" to fix mixed line-endings in the repo
+*.csv            text
+*.parquet        text
