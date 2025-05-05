@@ -57,7 +57,7 @@ if pagina_atual == 'Mapas por partido':
     bairros = json.loads(resp.text)      
 
 
-    locais_voto = pd.read_csv("locais_votacao_poa.csv")  # carrega locais de voto: zona, seção e bairro (arq tratado anteriormente)
+    locais_voto = pd.read_csv("./dados_votacao_e_locais/locais_votacao_poa.csv")  # carrega locais de voto: zona, seção e bairro (arq tratado anteriormente)
     locais_voto["Seções"] = locais_voto["Seções"].apply(ast.literal_eval)  # confere strings? 
 
     with col1:
@@ -661,7 +661,7 @@ if pagina_atual == 'Mapas nominais':
     resp = requests.get(url)
     bairros = json.loads(resp.text)  
 
-    locais_voto = pd.read_csv("locais_votacao_poa.csv")  # carrega locais de voto: zona, seção e bairro (arq tratado anteriormente)
+    locais_voto = pd.read_csv("./dados_votacao_e_locais/locais_votacao_poa.csv")  # carrega locais de voto: zona, seção e bairro (arq tratado anteriormente)
     locais_voto["Seções"] = locais_voto["Seções"].apply(ast.literal_eval)  # confere strings? 
 
     with col1:
