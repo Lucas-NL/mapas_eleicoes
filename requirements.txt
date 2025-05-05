@@ -1,3 +1,2 @@
 pandas
-plotly.io
-plotly.express
+plotly
